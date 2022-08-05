@@ -53,8 +53,6 @@ SELECT first_name, last_name, date_of_birth, gender
 FROM actors
 WHERE date_of_birth = (select min(date_of_birth) from actors where gender = 'F');
 
--- NOT PERFECT, NOT SURE IF I ANSWERED THE QUESTION
--- IN OTHER WORDS, COULD BE COMPLETED
 SELECT movie_name, movie_length, age_certificate
 FROM movies
 WHERE movie_length > (select avg(movie_length) from movies)
