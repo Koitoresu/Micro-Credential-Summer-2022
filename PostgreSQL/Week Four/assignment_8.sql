@@ -35,7 +35,7 @@ FROM movies
 GROUP BY movie_lang
 HAVING SUM(movie_length) > 500;
 
--- PART C --s
+-- PART C --
 SELECT act.first_name, act.last_name
 FROM actors act 
 JOIN movies_actors mv_act ON act.actor_id = mv_act.actor_id
