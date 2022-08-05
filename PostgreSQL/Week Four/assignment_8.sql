@@ -30,13 +30,12 @@ SELECT age_certificate, movie_lang, SUM(movie_length)
 FROM movies
 GROUP BY age_certificate, movie_lang;
 
--- NEEDS ALTERATION
 SELECT movie_lang
 FROM movies
 GROUP BY movie_lang
 HAVING SUM(movie_length) > 500;
 
--- PART C --
+-- PART C --s
 SELECT act.first_name, act.last_name
 FROM actors act 
 JOIN movies_actors mv_act ON act.actor_id = mv_act.actor_id
